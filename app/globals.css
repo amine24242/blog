@@ -1,0 +1,195 @@
+:root {
+  --bg: #fff;
+  --text: #111;
+  --muted: #666;
+  --border: #eaeaea;
+  --link: #111;
+  --link-hover: #000;
+  --code-bg: #f5f5f5;
+  --blockquote-border: #ddd;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0a0a0a;
+    --text: #f2f2f2;
+    --muted: #999;
+    --border: #333;
+    --link: #f2f2f2;
+    --link-hover: #fff;
+    --code-bg: #1a1a1a;
+    --blockquote-border: #444;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--text);
+  background: var(--bg);
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 48px 24px;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+/* Back link */
+.back-link {
+  display: inline-block;
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 32px;
+}
+
+.back-link:hover {
+  color: var(--text);
+}
+
+/* Post header */
+.post-header {
+  margin-bottom: 24px;
+}
+
+.post-title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.post-byline {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.post-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 24px 0;
+}
+
+/* Post content */
+.post-content h2 {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 28px 0 12px;
+}
+
+.post-content h3 {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 24px 0 8px;
+}
+
+.post-content p {
+  margin: 12px 0;
+}
+
+.post-content ul,
+.post-content ol {
+  margin: 12px 0;
+  padding-left: 24px;
+}
+
+.post-content li {
+  margin: 4px 0;
+}
+
+.post-content blockquote {
+  border-left: 2px solid var(--blockquote-border);
+  padding-left: 16px;
+  color: var(--muted);
+  margin: 16px 0;
+}
+
+.post-content code {
+  font-family: "SF Mono", "Fira Code", "Fira Mono", Menlo, Consolas, monospace;
+  font-size: 13px;
+  background: var(--code-bg);
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+.post-content pre {
+  background: var(--code-bg);
+  padding: 16px;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin: 16px 0;
+}
+
+.post-content pre code {
+  background: none;
+  padding: 0;
+  font-size: 13px;
+}
+
+.post-content a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.post-content img {
+  max-width: 100%;
+  border-radius: 6px;
+  margin: 16px 0;
+}
+
+.post-content strong {
+  font-weight: 600;
+}
+
+/* Home page */
+.site-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 32px;
+}
+
+.post-list {
+  list-style: none;
+}
+
+.post-list-item {
+  margin-bottom: 16px;
+}
+
+.post-list-item a {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+}
+
+.post-list-title {
+  font-weight: 400;
+}
+
+.post-list-date {
+  font-size: 13px;
+  color: var(--muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
